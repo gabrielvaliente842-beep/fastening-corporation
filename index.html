@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastening Corporation | Soluciones que sostienen el futuro</title>
+  <meta name="description" content="Fastening Corporation: soluciones industriales de sujeción, ventas nacionales e internacionales y atención digital.">
+  <style>
+    :root{
+      --petroleo:#0b3038;--petroleo2:#124a55;--crema:#f6f1e8;
+      --metal:#9ba8ad;--oscuro:#07191d;--linea:rgba(246,241,232,.16);
+      --acento:#d8c7a1
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--crema);color:var(--oscuro);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .top{background:var(--oscuro);color:var(--crema);padding:10px 6%;font-size:12px;letter-spacing:1.2px;text-align:center}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,48,56,.97);border-bottom:1px solid var(--linea);color:var(--crema)}
+    nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 6%}
+    .brand{font-weight:800;letter-spacing:2px;font-size:17px}.brand span{color:var(--acento)}
+    .links{display:flex;gap:24px;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+    .links a:hover{color:var(--acento)}
+    .hero{background:linear-gradient(135deg,var(--petroleo),#0e3942 58%,#07191d);color:var(--crema);padding:92px 6% 82px;overflow:hidden}
+    .hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}
+    .eyebrow{color:var(--acento);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+    h1{font-size:clamp(44px,7vw,88px);line-height:.92;letter-spacing:-3px;margin-bottom:24px}
+    .hero p{max-width:650px;color:#dbe3e4;font-size:18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-block;padding:14px 20px;border:1px solid var(--acento);font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;transition:.2s}
+    .btn.primary{background:var(--acento);color:var(--oscuro)}.btn:hover{transform:translateY(-2px)}
+    .spec-panel{border:1px solid var(--linea);background:rgba(255,255,255,.035);padding:26px;position:relative}
+    .spec-panel:before{content:'';position:absolute;left:0;top:0;width:55px;height:3px;background:var(--acento)}
+    .panel-title{font-size:11px;letter-spacing:2px;color:var(--metal);margin-bottom:25px}
+    .machine{height:190px;border:1px solid rgba(216,199,161,.35);display:flex;align-items:center;justify-content:center;position:relative;background:repeating-linear-gradient(0deg,transparent 0 30px,rgba(255,255,255,.025) 31px),repeating-linear-gradient(90deg,transparent 0 50px,rgba(255,255,255,.025) 51px)}
+    .machine-core{width:170px;height:88px;border:5px solid var(--metal);position:relative}
+    .machine-core:before,.machine-core:after{content:'';position:absolute;background:var(--metal)}
+    .machine-core:before{width:25px;height:55px;left:-27px;top:12px}
+    .machine-core:after{width:25px;height:55px;right:-27px;top:12px}
+    .ram{position:absolute;width:70px;height:15px;background:var(--acento);top:-12px;left:50px}
+    .base{position:absolute;width:210px;height:9px;background:var(--metal);bottom:28px}
+    .cross{position:absolute;width:250px;height:1px;background:rgba(216,199,161,.4)}
+    .panel-data{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .data{border-top:1px solid var(--linea);padding-top:10px}.data small{display:block;color:var(--metal);font-size:10px;letter-spacing:1px}.data strong{font-size:13px}
+    section{padding:82px 6%}.wrap{max-width:1200px;margin:auto}
+    .section-tag{color:var(--petroleo2);font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+    .section-title{font-size:clamp(30px,4vw,50px);line-height:1.05;margin-bottom:18px}.lead{max-width:760px;color:#536167}
+    .stats{background:var(--petroleo);color:var(--crema);padding:35px 6%}
+    .stats-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .stat{border-left:1px solid var(--linea);padding-left:20px}.stat strong{font-size:31px;display:block;color:var(--acento)}.stat span{font-size:11px;letter-spacing:1px;color:#c7d1d2}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:38px}
+    .card{border:1px solid #d7d2c8;background:#fff;padding:28px}.card h3{font-size:21px;margin-bottom:9px}.card p{color:#5d696d;font-size:14px}
+    .label{display:inline-block;margin-bottom:18px;padding:6px 9px;background:#e9e2d4;color:var(--petroleo);font-size:10px;font-weight:800;letter-spacing:1.2px}
+    .project{background:#e8e3da}.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .project-box{background:var(--petroleo);color:var(--crema);padding:35px}.project-box h3{font-size:28px;margin-bottom:12px}.project-box p{color:#d2dcdd;font-size:14px}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:25px}
+    .feature{border-top:1px solid var(--linea);padding-top:12px;font-size:12px}.feature b{color:var(--acento);display:block;margin-bottom:4px}
+    .contact{background:var(--oscuro);color:var(--crema)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:35px}
+    .contact-card{border:1px solid var(--linea);padding:25px}.contact-card small{display:block;color:var(--metal);font-size:10px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:5px}.contact-card a:hover{color:var(--acento)}
+    footer{background:#041013;color:#8fa0a4;padding:25px 6%;font-size:11px;text-align:center}
+    @media(max-width:800px){
+      .links{display:none}.hero-inner,.project-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:65px}.stats-grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}
+      .hero h1{letter-spacing:-2px}.spec-panel{margin-top:5px}
+    }
+    @media(max-width:480px){section{padding:62px 6%}.stat strong{font-size:25px}.features{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="top">FABRICACIÓN · SUJECIÓN INDUSTRIAL · VENTAS NACIONALES E INTERNACIONALES</div>
+
+  <header>
+    <nav>
+      <a class="brand" href="#inicio">FASTENING <span>CORPORATION</span></a>
+      <div class="links">
+        <a href="#empresa">Empresa</a>
+        <a href="#presencia">Presencia</a>
+        <a href="#proyecto">Proyecto</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Ingeniería · Industria · Precisión</div>
+          <h1>FASTENING<br>CORPORATION</h1>
+          <p>Soluciones que sostienen el futuro. Diseñamos y comercializamos soluciones de sujeción pensadas para responder a las exigencias de la industria.</p>
+          <div class="cta">
+            <a class="btn primary" href="#proyecto">Ver proyecto</a>
+            <a class="btn" href="#contacto">Contactarnos</a>
+          </div>
+        </div>
+
+        <div class="spec-panel">
+          <div class="panel-title">SISTEMA FC · MÓDULO DE SUJECIÓN</div>
+          <div class="machine">
+            <div class="cross"></div>
+            <div class="machine-core"><div class="ram"></div></div>
+            <div class="base"></div>
+          </div>
+          <div class="panel-data">
+            <div class="data"><small>ESTADO</small><strong>OPERATIVO</strong></div>
+            <div class="data"><small>ÁREA</small><strong>INDUSTRIAL</strong></div>
+            <div class="data"><small>COBERTURA</small><strong>AR + INTL.</strong></div>
+            <div class="data"><small>EXPERIENCIA</small><strong>+10 AÑOS</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stats-grid">
+        <div class="stat"><strong>+10</strong><span>AÑOS EN LA INDUSTRIA</span></div>
+        <div class="stat"><strong>02</strong><span>SEDES OPERATIVAS</span></div>
+        <div class="stat"><strong>AR + INTL.</strong><span>ALCANCE COMERCIAL</span></div>
+        <div class="stat"><strong>24/7</strong><span>CANALES DIGITALES</span></div>
+      </div>
+    </div>
+
+    <section id="empresa">
+      <div class="wrap">
+        <div class="section-tag">01 · Quiénes somos</div>
+        <h2 class="section-title">Una empresa pensada para la industria real.</h2>
+        <p class="lead">Fastening Corporation cuenta con más de diez años de experiencia en el sector. Nuestro enfoque combina soluciones de sujeción, atención comercial y una operación preparada para abastecer clientes en Argentina y otros mercados.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="label">EXPERIENCIA</span>
+            <h3>Más de una década</h3>
+            <p>Una trayectoria construida sobre la búsqueda de soluciones confiables, precisión y respuesta a las necesidades de cada cliente.</p>
+          </article>
+          <article class="card">
+            <span class="label">COMERCIAL</span>
+            <h3>Venta directa y digital</h3>
+            <p>Atendemos consultas y ventas mediante nuestro sitio web, redes sociales y Mercado Libre, ampliando el alcance de nuestros productos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="presencia" class="project">
+      <div class="wrap">
+        <div class="section-tag">02 · Presencia</div>
+        <h2 class="section-title">Cerca del cliente. También fuera de nuestras fronteras.</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="label">SEDE 01</span>
+            <h3>Capital Federal</h3>
+            <p>Centro de operaciones y atención comercial. Dirección conceptual para la presentación académica: Av. de la Industria 1450 · CABA · Argentina.</p>
+          </article>
+          <article class="card">
+            <span class="label">SEDE 02</span>
+            <h3>San Miguel de Tucumán</h3>
+            <p>Presencia regional para ampliar la cobertura comercial y acompañar la distribución de soluciones industriales.</p>
+          </article>
+          <article class="card">
+            <span class="label">MARKETPLACE</span>
+            <h3>Mercado Libre</h3>
+            <p>Canal de venta digital para facilitar el acceso a productos y consultas desde distintas zonas del país.</p>
+          </article>
+          <article class="card">
+            <span class="label">EXPORTACIÓN</span>
+            <h3>Ventas internacionales</h3>
+            <p>Capacidad comercial orientada a clientes y oportunidades fuera de Argentina.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyecto">
+      <div class="wrap project-grid">
+        <div>
+          <div class="section-tag">03 · Proyecto académico</div>
+          <h2 class="section-title">Máquina de sujeción industrial</h2>
+          <p class="lead">El proyecto representa una máquina destinada a mantener una pieza firme durante una operación de trabajo. La sujeción busca aportar estabilidad, repetibilidad y seguridad al proceso.</p>
+        </div>
+        <div class="project-box">
+          <h3>Diseño · Control · Sujeción</h3>
+          <p>La propuesta integra una estructura mecánica de sujeción con un sistema de accionamiento y control, tomando como referencia criterios industriales de funcionamiento y mantenimiento.</p>
+          <div class="features">
+            <div class="feature"><b>01 · ESTRUCTURA</b>Base y elementos de soporte.</div>
+            <div class="feature"><b>02 · ACCIONAMIENTO</b>Mecanismo para aplicar la fuerza.</div>
+            <div class="feature"><b>03 · CONTROL</b>Supervisión del ciclo de trabajo.</div>
+            <div class="feature"><b>04 · SEGURIDAD</b>Operación controlada y estable.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="wrap">
+        <div class="section-tag" style="color:var(--acento)">04 · Contacto</div>
+        <h2 class="section-title">Hablemos de tu próximo proyecto.</h2>
+        <div class="contact-grid">
+          <div class="contact-card"><small>Instagram</small><a href="https://instagram.com/fastening.corp" target="_blank" rel="noopener">@fastening.corp</a></div>
+          <div class="contact-card"><small>Email</small><a href="mailto:info.fasteningcorp@gmail.com">info.fasteningcorp@gmail.com</a></div>
+          <div class="contact-card"><small>Ubicación conceptual</small><span>Av. de la Industria 1450 · CABA · Argentina</span></div>
+          <div class="contact-card"><small>Atención</small><span>Ventas nacionales · Ventas internacionales · Mercado Libre</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>FASTENING CORPORATION · Sitio institucional para presentación académica · Dirección utilizada con fines conceptuales.</footer>
+</body>
+</html>
